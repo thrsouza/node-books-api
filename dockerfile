@@ -1,12 +1,13 @@
 FROM node
 
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
+COPY yarn.lock ./
 
-RUN npm install --production --remove-dev
+RUN yarn --prod
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "start:prod"]
+CMD ["yarn", "start:prod"]

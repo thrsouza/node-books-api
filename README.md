@@ -32,7 +32,7 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 
 <br />
 
-> Configure the connection string into: **./src/app/config.json** <br />
+> Configure the connection string into: **./src/config.json** <br />
 > As an suggestion, use a database on the **mLab** platform: [https://mlab.com/](https://mlab.com/)
 
 <br />
@@ -48,9 +48,9 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 // RESPONSE (STATUS: 200)
 [
   {
-    name: "Thiago de Souza",
-    createAt: "2019-02-20T15:37:56.316Z",
-    id: "5c6d74540529cf1790d0249f"
+    name: String,
+    createAt: Date,
+    id: String
   }
 ];
 ```
@@ -199,5 +199,5 @@ _Somadevs_ was born with the purpose of helping the community/developers on dail
 
 <small>
 MEDIUM: https://medium.com/somadevs<br>
-E-MAIL: contact@somadevs.com <br>
+E-MAIL: team@somadevs.com <br>
 </small>
