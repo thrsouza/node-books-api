@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 
-const config = require('./config.json')
+const config = require('./app/config.json')
 
 class App {
   constructor () {
@@ -21,9 +21,13 @@ class App {
   }
 
   configureDbConnection () {
-    mongoose.connect(config[this.environment].connectionString, {
-      useNewUrlParser: true
-    })
+    const connString = config[this.environment].connectionString
+
+    if (connString) {
+      mongoose.connect(connString, { useNewUrlParser: true })
+    } else {
+      console.warn(`Connection String is not defined!`)
+    }
   }
 }
 

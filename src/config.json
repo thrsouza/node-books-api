@@ -1,8 +1,0 @@
-{
-  "development": {
-    "connectionString": "mongodb://<user>:<pass>@<server>.mlab.com:<port>/books-db"
-  },
-  "production": {
-    "connectionString": "mongodb://<user>:<pass>@<server>.mlab.com:<port>/books-db"
-  }
-}

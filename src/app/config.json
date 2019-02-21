@@ -1,0 +1,8 @@
+{
+  "development": {
+    "connectionString": null
+  },
+  "production": {
+    "connectionString": null
+  }
+}
