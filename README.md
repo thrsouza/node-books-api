@@ -193,11 +193,7 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 
 <hr />
 
-### ABOUT US:
-
-_Somadevs_ was born with the purpose of helping the community/developers on daily problems and (mainly) to present some of the best development tools and technologies.
-
 <small>
-MEDIUM: https://medium.com/somadevs<br>
-E-MAIL: team@somadevs.com <br>
+MEDIUM: https://medium.com/@thiagodesouza.io<br>
+E-MAIL: email@thiagodesouza.com <br>
 </small>
