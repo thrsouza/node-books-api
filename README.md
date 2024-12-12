@@ -13,26 +13,25 @@ This project was created as an example of "How to Create a Nodejs API" for educa
 To install all dependencies, you must run the following command:
 
 ```
-$ yarn
+$ pnpm install
 ```
 
 To run the application:
 
 ```
-$ yarn start
+$ pnpm start
 ```
 
 To start server into a _docker container_:
 
 ```
-$ docker build -t somadevs/node-books-api .
-$ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
+$ docker build -t thrsouza/node-books-api .
+$ docker run --name node-books-api -p 3000:3000 -d thrsouza/node-books-api
 ```
 
 <br />
 
-> Configure the connection string into: **./src/config.json** <br />
-> As an suggestion, use a database on the **mLab** platform: [https://mlab.com/](https://mlab.com/)
+> Configure the connection string into: **.env** <br />
 
 <br />
 
@@ -51,7 +50,7 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
     createAt: Date,
     id: String
   }
-];
+]
 ```
 
 - GET: _/api/authors/:id_
@@ -60,9 +59,9 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 // GET http://localhost:3000/api/authors/:id
 // RESPONSE (STATUS: 200)
 {
-"name": String,
-"createAt": Date,
-"id": String
+  "name": String,
+  "createAt": Date,
+  "id": String
 }
 ```
 
@@ -72,14 +71,14 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 // POST http://localhost:3000/api/authors
 // REQUEST (BODY: JSON)
 {
-"name": String
+  "name": String
 }
 
 // RESPONSE (STATUS: 201)
 {
-"name": String,
-"createAt": Date,
-"id": String
+  "name": String,
+  "createAt": Date,
+  "id": String
 }
 ```
 
@@ -89,7 +88,7 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 // PUT http://localhost:3000/api/authors/:id
 // REQUEST (BODY: JSON)
 {
-"name": String
+  "name": String
 }
 
 // RESPONSE (STATUS: 204)
@@ -123,7 +122,7 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
     createAt: Date,
     id: String
   }
-];
+]
 ```
 
 - GET: _/api/books/:id_
@@ -149,24 +148,24 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 ```javascript
 // POST http://localhost:3000/api/books/:id
 // REQUEST (BODY: JSON)
- {
-   "name": String,
-   "year": Number,
-   "author": String
- }
+{
+  "name": String,
+  "year": Number,
+  "author": String
+}
 
  // RESPONSE (STATUS: 201)
- {
-   "name": String,
-   "year": Number,
-   "author": {
-     "name": String,
-     "createAt": Date,
-     "id": String
-   },
-   "createAt": Date,
-   "id": String
- }
+{
+  "name": String,
+  "year": Number,
+  "author": {
+    "name": String,
+    "createAt": Date,
+    "id": String
+  },
+  "createAt": Date,
+  "id": String
+}
 ```
 
 - PUT: _/api/books/:id_
