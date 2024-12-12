@@ -1,5 +1,5 @@
 {
-  "name": "node-books-api",
+  "name": "books-api",
   "version": "1.0.0",
   "main": "src/server.js",
   "license": "MIT",

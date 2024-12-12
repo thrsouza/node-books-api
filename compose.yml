@@ -1,15 +1,15 @@
 services:
   books_api:
+    image: thrsouza/books-api
     container_name: books_api
     build: .
     ports:
       - "3000:3000"
     environment:
+      - MONGO_CONNECTION_STRING=mongodb://books_db:27017/books-db
       - PORT=3000
-      - MONGO_CONNECTION_STRING=mongodb://books_db:27017/node-books-api
     depends_on:
       - books_db
-
 
   books_db:
     image: mongo

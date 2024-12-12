@@ -1,4 +1,4 @@
-# NODE-BOOKS-API
+# Node Books Api
 
 This project was created as an example of "How to Create a Nodejs API" for educational porposes.
 
@@ -16,6 +16,12 @@ To install all dependencies, you must run the following command:
 $ pnpm install
 ```
 
+Define the environament variables:
+
+```env
+MONGO_CONNECTION_STRING=mongodb://localhost:27017/books-db
+```
+
 To run the application:
 
 ```
@@ -25,15 +31,9 @@ $ pnpm start
 To start server into a _docker container_:
 
 ```
-$ docker build -t thrsouza/node-books-api .
-$ docker run --name node-books-api -p 3000:3000 -d thrsouza/node-books-api
+$ docker build -t thrsouza/books-api .
+$ docker run --name books-api -p 3000:3000 -d thrsouza/books-api
 ```
-
-<br />
-
-> Configure the connection string into: **.env** <br />
-
-<br />
 
 ### Endpoints
 
@@ -100,8 +100,6 @@ $ docker run --name node-books-api -p 3000:3000 -d thrsouza/node-books-api
 // DELETE http://localhost:3000/api/authors/:id
 // RESPONSE (STATUS: 204)
 ```
-
-<br />
 
 **Books**
 
