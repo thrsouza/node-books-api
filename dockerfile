@@ -2,12 +2,13 @@ FROM node
 
 WORKDIR /app
 COPY package.json ./
-COPY yarn.lock ./
+COPY pnpm-lock.yaml ./
+RUN corepack enable
 
-RUN yarn --prod
+RUN pnpm install
 
 COPY . .
 
 EXPOSE 3000
 
-CMD ["yarn", "start:prod"]
+CMD ["pnpm", "start"]

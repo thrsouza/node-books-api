@@ -1,7 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
 
-const config = require('./config.json')
+dotenv.config()
 
 class App {
   constructor () {
@@ -21,14 +22,18 @@ class App {
   }
 
   configureDbConnection () {
-    const connString = config[this.environment].connectionString
+    const connString = process.env.MONGO_CONNECTION_STRING
 
     if (connString) {
-      mongoose.connect(connString, { useNewUrlParser: true })
+      mongoose.connect(connString)
     } else {
       console.warn(`Connection String is not defined!`)
     }
   }
+
+  listen(port, callback) {
+    this.express.listen(port, callback)
+  }
 }
 
-module.exports = new App().express
+module.exports = new App()

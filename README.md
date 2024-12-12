@@ -5,7 +5,6 @@ This project was created as an example of "How to Create a Nodejs API" for educa
 ### Requirements
 
 - [Nodejs](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/)
 - [VS Code](https://code.visualstudio.com/)
 - [Docker](https://www.docker.com/products/docker-engine)
 
@@ -190,10 +189,3 @@ $ docker run --name node-books-api -p 3000:3000 -d somadevs/node-books-api
 // DELETE http://localhost:3000/api/books/:id
 // RESPONSE (STATUS: 204)
 ```
-
-<hr />
-
-<small>
-MEDIUM: https://medium.com/@thiagodesouza.io<br>
-E-MAIL: email@thiagodesouza.com <br>
-</small>
